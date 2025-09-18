@@ -1,0 +1,20 @@
+{
+  "name": "code_runner",
+  "version": "1.0.0",
+  "description": "Sandboxed code executor api",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "nodemon server.js",
+    "build": "npm install"
+  },
+  "author": "Geoff-Robin",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

@@ -1,0 +1,430 @@
+/* Enhanced styles for URL Grid Component */
+.url-grid-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.url-grid-wrapper {
+  background-color: rgba(0, 0, 0, 0.9);
+  flex-grow: 1;
+  padding: 40px 20px;
+}
+
+.url-grid-container {
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto;
+  color: #fff;
+  background-color: rgba(15, 15, 15, 0.7);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.url-grid-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.url-grid-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+.url-grid-page-indicator {
+  font-size: 14px;
+  color: #aaa;
+  padding: 5px 12px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+}
+
+.url-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.url-grid-cell {
+  aspect-ratio: 1/1;
+  background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  min-height: 140px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.url-grid-cell:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  border-color: rgba(52, 120, 246, 0.3);
+}
+
+.url-grid-add-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #3b7ef7, #2862d4);
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(52, 120, 246, 0.4);
+  transition: all 0.3s ease;
+}
+
+.url-grid-add-button:hover {
+  transform: scale(1.05) rotate(90deg);
+  background: linear-gradient(145deg, #4285f4, #2b6cd1);
+  box-shadow: 0 6px 15px rgba(52, 120, 246, 0.6);
+}
+
+.plus-icon {
+  line-height: 0;
+}
+
+.url-grid-url-display {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.url-grid-url-favicon {
+  margin-top: 15px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.favicon-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #333, #444);
+  border-radius: 50%;
+}
+
+.url-grid-url-text {
+  word-break: break-all;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  color: #f0f0f0;
+  max-width: 100%;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Enhanced Pagination styles */
+.url-grid-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  padding: 15px 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  gap: 10px;
+}
+
+.url-grid-pagination-nav {
+  background: linear-gradient(145deg, #3b7ef7, #2862d4);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.url-grid-pagination-nav:hover:not(.disabled) {
+  background: linear-gradient(145deg, #4285f4, #2b6cd1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(52, 120, 246, 0.4);
+}
+
+.url-grid-pagination-nav.disabled {
+  background: linear-gradient(145deg, #444, #333);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.nav-icon {
+  font-size: 18px;
+  line-height: 0;
+}
+
+.url-grid-pagination-numbers {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.url-grid-pagination-number {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.url-grid-pagination-number.active {
+  background: linear-gradient(145deg, #3b7ef7, #2862d4);
+  border-color: rgba(52, 120, 246, 0.6);
+  box-shadow: 0 0 15px rgba(52, 120, 246, 0.4);
+}
+
+.url-grid-pagination-number:hover:not(.active) {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+}
+
+.url-grid-pagination-ellipsis {
+  color: #aaa;
+  margin: 0 5px;
+  font-size: 18px;
+}
+
+/* Enhanced Modal styles */
+.url-grid-modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.url-grid-modal-content {
+  background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 450px;
+  width: 90%;
+  color: #f0f0f0;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.url-grid-modal-content h3 {
+  margin-top: 0;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 15px;
+}
+
+.url-grid-form-group {
+  margin-bottom: 25px;
+}
+
+.url-grid-form-group input {
+  width: 100%;
+  padding: 14px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.url-grid-form-group input:focus {
+  outline: none;
+  border-color: #3478F6;
+  box-shadow: 0 0 0 3px rgba(52, 120, 246, 0.3);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.url-grid-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.url-grid-btn {
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.url-grid-btn-cancel {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.url-grid-btn-cancel:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.url-grid-btn-submit {
+  background: linear-gradient(145deg, #3b7ef7, #2862d4);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.url-grid-btn-submit:hover {
+  background: linear-gradient(145deg, #4285f4, #2b6cd1);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Focus states for better accessibility */
+.url-grid-btn:focus,
+.url-grid-pagination-nav:focus,
+.url-grid-pagination-number:focus,
+.url-grid-add-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 120, 246, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .url-grid-container {
+      padding: 20px;
+  }
+  
+  .url-grid {
+      gap: 15px;
+  }
+  
+  .url-grid-add-button {
+      width: 50px;
+      height: 50px;
+      font-size: 24px;
+  }
+  
+  .url-grid-header h2 {
+      font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .url-grid-cell {
+      min-height: 120px;
+  }
+  
+  .url-grid-pagination-number {
+      width: 32px;
+      height: 32px;
+      margin: 0 3px;
+  }
+  
+  .url-grid-pagination-nav {
+      padding: 7px 14px;
+      font-size: 14px;
+  }
+  
+  .url-grid-modal-content {
+      padding: 25px;
+  }
+  
+  .url-grid-modal-content h3 {
+      font-size: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .url-grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+  }
+  
+  .url-grid-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+  }
+  
+  .url-grid-page-indicator {
+      align-self: flex-end;
+  }
+  
+  .url-grid-pagination {
+      flex-wrap: wrap;
+      padding: 10px;
+  }
+  
+  .url-grid-pagination-numbers {
+      order: 3;
+      width: 100%;
+      margin-top: 10px;
+      justify-content: center;
+  }
+  
+  .url-grid-pagination-number {
+      width: 28px;
+      height: 28px;
+      font-size: 12px;
+      margin: 0 2px;
+  }
+  
+  .url-grid-btn {
+      padding: 10px 16px;
+  }
+}
