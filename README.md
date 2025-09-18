@@ -1,3 +1,4 @@
+<h1>GitGud</h1>
 GitGud-A Guided Competitive Coding Platform
 
 GitGud is an innovative web application designed to assist users step-by-step while solving competitive programming problems sourced from popular platforms like LeetCode, Codeforces, and CodeChef.
